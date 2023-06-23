@@ -42,6 +42,7 @@ const Navbar = () => {
           className={styles.cart}
         />
         <img src="/assets/navbar/Bell.svg" alt="Bell" />
+        <img src="/assets/navbar/hamburg.svg" className={styles.burger} />
       </div>
       <div className={styles.containerAvatar}>
         <img src="/assets/navbar/Avatar Plus Large.svg" alt="Avatar" />
