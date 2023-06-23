@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Kanit } from "next/font/google";
-// import styles from "@/styles/Home.module.scss";
+import styles from "@/styles/Home.module.scss";
 import Navbar from "@/components/Navbar";
 import SubNavbar from "@/components/SubNavbar";
 
@@ -18,6 +18,17 @@ export default function Home() {
       <main className={kanit.className}>
         <Navbar />
         <SubNavbar />
+        <div className={styles.sectionOne}>
+          <p>
+            <span>L ´Etape México</span> te lleva a vivir la mejor experiencia
+            del Tour de France con el serial de eventos de ciclismo amateur más
+            importante en México.
+          </p>
+          <p>
+            Se parte de esta experiencia y rueda en las mejores rutas de México
+            diseñadas por expertos del TDF.
+          </p>
+        </div>
       </main>
     </>
   );
