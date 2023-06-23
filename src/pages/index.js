@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Kanit } from "next/font/google";
 // import styles from "@/styles/Home.module.scss";
 import Navbar from "@/components/Navbar";
+import SubNavbar from "@/components/SubNavbar";
 
 const kanit = Kanit({ weight: "400", subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <main className={kanit.className}>
         <Navbar />
+        <SubNavbar />
       </main>
     </>
   );

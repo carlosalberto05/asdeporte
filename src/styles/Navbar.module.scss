@@ -8,19 +8,20 @@ $color-primary: #FF6A00;
 	width: 100%;
 	height: 80px;
 	background-color: $color-primary;
+	// box-shadow: 0px 6px 3px -1px rgba(0, 0, 0, 0.55);
+
+	
 }
 
 .logo {
 	width: 35%;
-// border: 1px solid white;
 	img {
 			margin-left: 15%;
-			// max-width: 100%;
 			height: auto;
 		}
+				
 
 }
-
 
 .menu {
 	width: 40%;
@@ -45,7 +46,8 @@ $color-primary: #FF6A00;
 
 
 .containerIcons{
-     width: 130px; 
+    //  width: 130px; 
+	width: 10%;
      height: 80px; 
      background: #000000;
      -webkit-transform: skew(-20deg);
@@ -57,6 +59,10 @@ $color-primary: #FF6A00;
 		left: 84%;
 		top: 0;
 		z-index: 1;
+
+		@media (max-width: 768px) {
+				background: #761313;
+			}
 	
 }
 
@@ -99,3 +105,8 @@ $color-primary: #FF6A00;
 		}
 } 
 
+.cart {
+	@media (max-width: 768px) {
+			display: none;
+		}
+}

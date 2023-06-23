@@ -33,9 +33,14 @@ const Navbar = () => {
         </ul>
       </div>
       <div className={styles.containerIcons}></div>
+
       <div className={styles.icons}>
         <img src="/assets/navbar/Search.svg" alt="Search" />
-        <img src="/assets/navbar/Cart-add.svg" alt="Cart" />
+        <img
+          src="/assets/navbar/Cart-add.svg"
+          alt="Cart"
+          className={styles.cart}
+        />
         <img src="/assets/navbar/Bell.svg" alt="Bell" />
       </div>
       <div className={styles.containerAvatar}>
