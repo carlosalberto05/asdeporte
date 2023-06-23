@@ -22,11 +22,18 @@
 	width: 50%;
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
+	justify-content: center;	
+}
 
-
+.containergallery {
+	width: 70%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		
 	img {
-		width: 80px;
-		height: 53px;
-	}
+			width: 80px;
+			height: 53px;
+			cursor: pointer;
+		}
 }

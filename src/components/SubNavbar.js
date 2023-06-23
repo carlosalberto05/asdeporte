@@ -8,11 +8,13 @@ const SubNavbar = () => {
         <img src="/assets/subnavbar/sublogo.svg" alt="Logo" />
       </div>
       <div className={styles.smallgalery}>
-        <img src="/assets/subnavbar/gal1.jpg" />
-        <img src="/assets/subnavbar/gal2.jpg" />
-        <img src="/assets/subnavbar/gal3.jpg" />
-        <img src="/assets/subnavbar/gal4.png" />
-        <img src="/assets/subnavbar/gal5.jpg" />
+        <div className={styles.containergallery}>
+          <img src="/assets/subnavbar/gal1.jpg" />
+          <img src="/assets/subnavbar/gal2.jpg" />
+          <img src="/assets/subnavbar/gal3.jpg" />
+          <img src="/assets/subnavbar/gal4.png" />
+          <img src="/assets/subnavbar/gal5.jpg" />
+        </div>
       </div>
     </div>
   );
