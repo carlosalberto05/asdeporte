@@ -4,7 +4,8 @@
 	justify-content: space-around;
 	align-items: center;
 	width: 66%;
-	height: 80%;
+	// height: 80%;
+	height: 400px;
 }
 
 .subContainer {
@@ -12,4 +13,23 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+}
+
+.containerGaleryResponsive{
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.containerGalery{
+		display: none;
+	}
+	.containerGaleryResponsive{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		width: 100%;
+		margin-top:80%;
+	}
+
 }

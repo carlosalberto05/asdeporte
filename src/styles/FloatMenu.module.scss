@@ -32,4 +32,13 @@
 	}
 }
 
-
+@media (max-width: 768px) {
+	.containerFloatMenu {
+		position: relative;
+		margin-left: 0;
+		margin-top:0;
+		background: black;
+		color: white;
+		box-shadow:none;
+	}
+}

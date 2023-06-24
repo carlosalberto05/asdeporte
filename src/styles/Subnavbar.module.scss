@@ -3,26 +3,60 @@
 	height: 81px;
 	display: flex;
 	flex-direction: row;
-	// border-bottom: 1px solid gray;
+	
+	@media (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		// height: 104px;
+		// height: 35%;
+		}
 } 
 
 .sublogo{
 	width: 50%;
 	display: flex;
 	align-items: center;
+
+	@media (max-width: 768px) {
+			width: 100%;
+			// height: 100%;
+			background-color: black;
+			justify-content: center;
+		}
 	
-	img {
+	.imageSublogo {
 		margin-left: 10%;
 		width: 106px;
 		height: 48.3px;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
 	}
+
+		.logoResponsive {
+			display: none;
+	
+			@media (max-width: 768px) {
+				display: block;
+				width: 35%;
+				// height: 48px;
+			}
+		}
 }
+
+
 
 .smallgalery{
 	width: 50%;
 	display: flex;
 	align-items: center;
 	justify-content: center;	
+
+	@media (max-width: 768px) {
+			width: 100%;
+			background-color: black;
+		}
 }
 
 .containergallery {
@@ -30,6 +64,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+
+		@media (max-width: 768px) {
+				width: 100%;
+				justify-content: space-between;
+			}
 		
 	img {
 			width: 80px;

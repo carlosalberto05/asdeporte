@@ -25,7 +25,16 @@ const SubNavbar = () => {
       {activeModal && <Modal setActiveModal={setActiveModal} />}
       <div className={styles.subnavbar}>
         <div className={styles.sublogo}>
-          <img src="/assets/subnavbar/sublogo.svg" alt="Logo" />
+          <img
+            src="/assets/subnavbar/sublogo.svg"
+            alt="Logo"
+            className={styles.imageSublogo}
+          />
+          <img
+            src="/assets/subnavbar/logoresponsive.svg"
+            alt="Logo responsivo"
+            className={styles.logoResponsive}
+          />
         </div>
         <div className={styles.smallgalery}>
           <div className={styles.containergallery}>

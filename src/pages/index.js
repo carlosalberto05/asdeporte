@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import SubNavbar from "@/components/SubNavbar";
 import Gelery from "@/components/Gelery";
 import FloatMenu from "@/components/FloatMenu";
+import Footer from "@/components/Footer";
 
 const kanit = Kanit({ weight: "400", subsets: ["latin"] });
 
@@ -21,7 +22,7 @@ export default function Home() {
         <Navbar />
         <SubNavbar />
         <div className={styles.sectionOne}>
-          <p>
+          <p className={styles.space}>
             <span>L ´Etape México</span> te lleva a vivir la mejor experiencia
             del Tour de France con el serial de eventos de ciclismo amateur más
             importante en México.
@@ -35,6 +36,7 @@ export default function Home() {
         <div className={styles.galery}>
           <Gelery />
         </div>
+        <Footer />
       </main>
     </>
   );
