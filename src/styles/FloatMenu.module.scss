@@ -18,6 +18,18 @@
 		text-decoration: none;
 		list-style: none;
 	}
+
+	li {
+		padding: 4px 10px;
+	}
+
+	li:hover {
+		border-radius: 2px;
+		background: var(--orange, #FF6A00);
+		padding: 4px 10px;
+		color: white;
+		cursor: pointer;
+	}
 }
 
 

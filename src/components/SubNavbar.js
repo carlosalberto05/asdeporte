@@ -1,22 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/Subnavbar.module.scss";
+import Modal from "./Modal";
 
 const SubNavbar = () => {
+  const [activeModal, setActiveModal] = useState(false);
+  const images = [
+    "/assets/subnavbar/gal1.jpg",
+    "/assets/subnavbar/gal2.jpg",
+    "/assets/subnavbar/gal3.jpg",
+    "/assets/subnavbar/gal4.png",
+    "/assets/subnavbar/gal5.jpg",
+  ];
+
+  const handleModal = () => {
+    setActiveModal(true);
+  };
+
+  const handleClose = () => {
+    setActiveModal(false);
+  };
+
   return (
-    <div className={styles.subnavbar}>
-      <div className={styles.sublogo}>
-        <img src="/assets/subnavbar/sublogo.svg" alt="Logo" />
-      </div>
-      <div className={styles.smallgalery}>
-        <div className={styles.containergallery}>
-          <img src="/assets/subnavbar/gal1.jpg" />
-          <img src="/assets/subnavbar/gal2.jpg" />
-          <img src="/assets/subnavbar/gal3.jpg" />
-          <img src="/assets/subnavbar/gal4.png" />
-          <img src="/assets/subnavbar/gal5.jpg" />
+    <>
+      {activeModal && <Modal setActiveModal={setActiveModal} />}
+      <div className={styles.subnavbar}>
+        <div className={styles.sublogo}>
+          <img src="/assets/subnavbar/sublogo.svg" alt="Logo" />
+        </div>
+        <div className={styles.smallgalery}>
+          <div className={styles.containergallery}>
+            {images.map((image, index) => (
+              <img
+                onClick={handleModal}
+                key={index}
+                src={image}
+                alt={`Imagen ${index}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
