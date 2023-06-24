@@ -1,8 +1,15 @@
 .containerGalery{
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	justify-content: space-around;
 	align-items: center;
-	width: 60%;
+	width: 66%;
 	height: 80%;
-	background-color: aqua;
+}
+
+.subContainer {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
 }
