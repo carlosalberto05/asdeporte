@@ -3,6 +3,7 @@ import { Kanit } from "next/font/google";
 import styles from "@/styles/Home.module.scss";
 import Navbar from "@/components/Navbar";
 import SubNavbar from "@/components/SubNavbar";
+import Gelery from "@/components/Gelery";
 
 const kanit = Kanit({ weight: "400", subsets: ["latin"] });
 
@@ -28,6 +29,9 @@ export default function Home() {
             Se parte de esta experiencia y rueda en las mejores rutas de México
             diseñadas por expertos del TDF.
           </p>
+        </div>
+        <div className={styles.galery}>
+          <Gelery />
         </div>
       </main>
     </>
