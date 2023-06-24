@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.scss";
 import Navbar from "@/components/Navbar";
 import SubNavbar from "@/components/SubNavbar";
 import Gelery from "@/components/Gelery";
+import FloatMenu from "@/components/FloatMenu";
 
 const kanit = Kanit({ weight: "400", subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function Home() {
             diseñadas por expertos del TDF.
           </p>
         </div>
+        <FloatMenu />
         <div className={styles.galery}>
           <Gelery />
         </div>
