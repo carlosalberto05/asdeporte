@@ -36,7 +36,7 @@ export default function Home() {
         <div className={styles.galery}>
           <Gelery />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </>
   );
