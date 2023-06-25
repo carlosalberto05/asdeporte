@@ -62,14 +62,14 @@ const Gelery = () => {
     <>
       <div className={styles.containerGalery}>
         <div className={styles.subContainer}>
-          <img src="/assets/galery/im1.svg" alt="Bell" />
-          <img src="/assets/galery/im2.svg" alt="Bell" />
-          <img src="/assets/galery/im3.svg" alt="Bell" />
+          <img src="/assets/galery/im1.svg" alt="Imagen 1" />
+          <img src="/assets/galery/im2.svg" alt="Imagen 2" />
+          <img src="/assets/galery/im3.svg" alt="Imagen 3" />
         </div>
         <div className={styles.subContainer}>
-          <img src="/assets/galery/im4.svg" alt="Bell" />
-          <img src="/assets/galery/im5.svg" alt="Bell" />
-          <img src="/assets/galery/im6.svg" alt="Bell" />
+          <img src="/assets/galery/im4.svg" alt="Imagen 4" />
+          <img src="/assets/galery/im5.svg" alt="Imagen 5" />
+          <img src="/assets/galery/im6.svg" alt="Imagen 6" />
         </div>
       </div>
 

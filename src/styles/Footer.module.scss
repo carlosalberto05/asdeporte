@@ -1,8 +1,8 @@
 .footer {
-	//width: 1141px;
 	width: 80vw;
 	height: 92px;
 	margin-left: 10vw;
+	margin-bottom: 3%;
 
 	p {
 		text-align: center;
@@ -10,16 +10,33 @@
 
 	.div__container {
 		width: 100%;
-		// height: 75%;
 		display: flex;
 
 		.container__image {
 			width: 16.67%;
-			// height: 100%;
 			border: 1px solid rgb(183, 180, 180);
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			padding: 12px;
 		}
 	}
+}
+
+@media (max-width: 768px) {
+	
+	
+.footer {
+
+	.div__container {
+		flex-direction: column;
+
+		.container__image {
+			width: 100%;
+			padding: 12px;
+		}
+	}
+}
+		
+	
 }
