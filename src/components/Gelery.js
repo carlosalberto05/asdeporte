@@ -72,17 +72,22 @@ const Gelery = () => {
           <img src="/assets/galery/im6.svg" alt="Bell" />
         </div>
       </div>
+
       <div className={styles.containerGaleryResponsive}>
         {information.map((info) => (
-          <div key={info.id}>
+          <div className={styles.containerCard} key={info.id}>
             <img src={info.image} />
-            <p>{info.title}</p>
-            <p>{info.city}</p>
-            <p>{info.date}</p>
-            <p>
-              <span>Desde: {info.princeMin}</span>
-              <span>Plus:{info.pricePlus}</span>
-            </p>
+            <div className={styles.containerText}>
+              <p className={styles.title}>{info.title}</p>
+              <p className={styles.text}>{info.city}</p>
+              <p className={styles.text}>{info.date}</p>
+              <p className={styles.text}>
+                <span>Desde: {info.princeMin}</span>
+                <span style={{ marginLeft: "10px" }}>
+                  Plus:{info.pricePlus}
+                </span>
+              </p>
+            </div>
           </div>
         ))}
       </div>

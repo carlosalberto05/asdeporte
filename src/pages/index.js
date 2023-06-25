@@ -33,9 +33,10 @@ export default function Home() {
           </p>
         </div>
         <FloatMenu />
-        <div className={styles.galery}>
+        {/* <div className={styles.galery}>
           <Gelery />
-        </div>
+        </div> */}
+        <Gelery />
         {/* <Footer /> */}
       </main>
     </>
