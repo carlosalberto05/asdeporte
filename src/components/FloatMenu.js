@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "@/styles/FloatMenu.module.scss";
+import { ModalContext } from "@/components/ModalContext";
 
 const FloatMenu = () => {
+  const { isModalActive } = useContext(ModalContext);
+  const opacityClass = isModalActive ? styles.modalActive : "";
   return (
-    <div className={styles.containerFloatMenu}>
+    <div className={`${styles.containerFloatMenu} ${opacityClass}`}>
       <ul>
         <li>Próximos eventos</li>
         <li>Paquetes</li>

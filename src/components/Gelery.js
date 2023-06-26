@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "@/styles/Galery.module.scss";
+import { ModalContext } from "@/components/ModalContext";
 
 const Gelery = () => {
+  const { isModalActive } = useContext(ModalContext);
+  const opacityClass = isModalActive ? styles.modalActive : "";
   const information = [
     {
       id: "e001",
@@ -60,7 +63,7 @@ const Gelery = () => {
   ];
   return (
     <>
-      <div className={styles.containerGalery}>
+      <div className={`${styles.containerGalery} ${opacityClass}`}>
         <div className={styles.subContainer}>
           <img src="/assets/galery/im1.svg" alt="Imagen 1" />
           <img src="/assets/galery/im2.svg" alt="Imagen 2" />
@@ -73,7 +76,7 @@ const Gelery = () => {
         </div>
       </div>
 
-      <div className={styles.containerGaleryResponsive}>
+      <div className={`${styles.containerGaleryResponsive} ${opacityClass}`}>
         {information.map((info) => (
           <div className={styles.containerCard} key={info.id}>
             <img src={info.image} />

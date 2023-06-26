@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import styles from "../styles/Subnavbar.module.scss";
 import Modal from "./Modal";
+import { ModalContext } from "@/components/ModalContext";
 
 const SubNavbar = () => {
-  const [activeModal, setActiveModal] = useState(false);
+  const { isModalActive, setIsModalActive } = useContext(ModalContext);
+  const opacityClass = isModalActive ? styles.modalActive : "";
+
   const images = [
     "/assets/subnavbar/gal1.jpg",
     "/assets/subnavbar/gal2.jpg",
@@ -13,17 +16,13 @@ const SubNavbar = () => {
   ];
 
   const handleModal = () => {
-    setActiveModal(true);
-  };
-
-  const handleClose = () => {
-    setActiveModal(false);
+    setIsModalActive(true);
   };
 
   return (
     <>
-      {activeModal && <Modal setActiveModal={setActiveModal} />}
-      <div className={styles.subnavbar}>
+      {isModalActive && <Modal />}
+      <div className={`${styles.subnavbar} ${opacityClass}`}>
         <div className={styles.sublogo}>
           <img
             src="/assets/subnavbar/sublogo.svg"

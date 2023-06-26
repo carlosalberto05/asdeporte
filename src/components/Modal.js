@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/Modal.module.scss";
+import { ModalContext } from "@/components/ModalContext";
 
-const Modal = ({ setActiveModal }) => {
+// const Modal = ({ setActiveModal }) => {
+const Modal = () => {
+  const { setIsModalActive } = useContext(ModalContext);
   const images = [
     "/assets/subnavbar/gal1.jpg",
     "/assets/subnavbar/gal2.jpg",
@@ -13,7 +16,10 @@ const Modal = ({ setActiveModal }) => {
   return (
     <div className={styles.containerModal}>
       <div className={styles.content}>
-        <button onClick={() => setActiveModal(false)} className={styles.close}>
+        <button
+          onClick={() => setIsModalActive(false)}
+          className={styles.close}
+        >
           X
         </button>
         <img src="/assets/modal/modalIm1.svg" alt="Imagen1" />

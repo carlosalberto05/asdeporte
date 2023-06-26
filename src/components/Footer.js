@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "../styles/Footer.module.scss";
+import { ModalContext } from "@/components/ModalContext";
 
 const Footer = () => {
+  const { isModalActive } = useContext(ModalContext);
+  const opacityClass = isModalActive ? styles.modalActive : "";
   return (
-    <footer className={styles.footer}>
+    <footer className={`${styles.footer} ${opacityClass}`}>
       <p>SOCIOS COMERCIALES</p>
       <div className={styles.div__container}>
         <div className={styles.container__image}>
