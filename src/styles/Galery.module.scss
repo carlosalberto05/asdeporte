@@ -1,7 +1,7 @@
 .containerGalery{
 	width: 100%;
-	padding-top: 5%;
-	padding-bottom: 4%;
+	padding-top: 4%;
+	padding-bottom: 1%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -14,7 +14,13 @@
 	flex-direction: row;
 	justify-content: space-around;
 	margin-bottom: 2%;
+
+	img{
+		width: 30%;
+	}
 }
+
+
 
 .containerGaleryResponsive{
 	display: none;

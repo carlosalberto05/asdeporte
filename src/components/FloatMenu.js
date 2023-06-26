@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import Link from "next/link";
 import styles from "@/styles/FloatMenu.module.scss";
 import { ModalContext } from "@/components/ModalContext";
 
@@ -8,10 +9,18 @@ const FloatMenu = () => {
   return (
     <div className={`${styles.containerFloatMenu} ${opacityClass}`}>
       <ul>
-        <li>Próximos eventos</li>
-        <li>Paquetes</li>
-        <li>Eventos pasados</li>
-        <li>Tribus destacadas</li>
+        <li>
+          <Link href="/proximos-eventos"> Próximos eventos</Link>
+        </li>
+        <li>
+          <Link href="/paquetes"> Paquetes</Link>
+        </li>
+        <li>
+          <Link href="/eventos-pasados">Eventos pasados</Link>
+        </li>
+        <li>
+          <Link href="/tribus-destacadas">Tribus destacadas</Link>
+        </li>
       </ul>
     </div>
   );
