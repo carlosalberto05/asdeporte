@@ -31,6 +31,13 @@
 	}
 }
 
+@media (max-width: 1022px) {
+	.containerFloatMenu{
+		width: 70%;
+		margin-left: 15%;
+	}
+}
+
 @media (max-width: 768px) {
 	.containerFloatMenu {
 		width: 100%;
@@ -48,3 +55,4 @@
 	opacity: 0.2;
 	pointer-events: none;
 }
+

@@ -2,18 +2,11 @@ import React, { useContext } from "react";
 import styles from "../styles/Subnavbar.module.scss";
 import Modal from "./Modal";
 import { ModalContext } from "@/components/ModalContext";
+import { images } from "@/utils/imgSubnav";
 
 const SubNavbar = () => {
   const { isModalActive, setIsModalActive } = useContext(ModalContext);
   const opacityClass = isModalActive ? styles.modalActive : "";
-
-  const images = [
-    "/assets/subnavbar/gal1.jpg",
-    "/assets/subnavbar/gal2.jpg",
-    "/assets/subnavbar/gal3.jpg",
-    "/assets/subnavbar/gal4.png",
-    "/assets/subnavbar/gal5.jpg",
-  ];
 
   const handleModal = () => {
     setIsModalActive(true);

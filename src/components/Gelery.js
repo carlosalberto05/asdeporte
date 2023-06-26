@@ -1,66 +1,12 @@
 import React, { useContext } from "react";
 import styles from "@/styles/Galery.module.scss";
 import { ModalContext } from "@/components/ModalContext";
+import { information } from "@/utils/imgGalery";
 
 const Gelery = () => {
   const { isModalActive } = useContext(ModalContext);
   const opacityClass = isModalActive ? styles.modalActive : "";
-  const information = [
-    {
-      id: "e001",
-      image: "/assets/galery/etape.svg",
-      title: "L´ETAPE by Tour de France",
-      city: "CDMX",
-      date: "4 septiembre 2022",
-      princeMin: "$680",
-      pricePlus: "$580",
-    },
-    {
-      id: "e002",
-      image: "/assets/galery/etape.svg",
-      title: "L´ETAPE by Tour de France",
-      city: "CDMX",
-      date: "4 septiembre 2022",
-      princeMin: "$680",
-      pricePlus: "$580",
-    },
-    {
-      id: "e003",
-      image: "/assets/galery/etape.svg",
-      title: "L´ETAPE by Tour de France",
-      city: "CDMX",
-      date: "4 septiembre 2022",
-      princeMin: "$680",
-      pricePlus: "$580",
-    },
-    {
-      id: "e004",
-      image: "/assets/galery/etape.svg",
-      title: "L´ETAPE by Tour de France",
-      city: "CDMX",
-      date: "4 septiembre 2022",
-      princeMin: "$680",
-      pricePlus: "$580",
-    },
-    {
-      id: "e005",
-      image: "/assets/galery/etape.svg",
-      title: "L´ETAPE by Tour de France",
-      city: "CDMX",
-      date: "4 septiembre 2022",
-      princeMin: "$680",
-      pricePlus: "$580",
-    },
-    {
-      id: "e006",
-      image: "/assets/galery/etape.svg",
-      title: "L´ETAPE by Tour de France",
-      city: "CDMX",
-      date: "4 septiembre 2022",
-      princeMin: "$680",
-      pricePlus: "$580",
-    },
-  ];
+
   return (
     <>
       <div className={`${styles.containerGalery} ${opacityClass}`}>
