@@ -1,7 +1,12 @@
 import Head from "next/head";
 import { Kanit } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import Main from "@/pages/main";
+import SubNavbar from "@/components/SubNavbar";
+import Gelery from "@/components/Gelery";
+import FloatMenu from "@/components/FloatMenu";
+import Footer from "@/components/Footer";
+import { ModalProvider } from "@/components/ModalContext";
+import { SectionOne } from "@/components/SectionOne";
 
 const kanit = Kanit({ weight: "400", subsets: ["latin"] });
 
@@ -16,7 +21,13 @@ export default function Home() {
       </Head>
       <main className={kanit.className}>
         <Navbar />
-        <Main />
+        <ModalProvider>
+          <SubNavbar />
+          <SectionOne />
+          <FloatMenu />
+          <Gelery />
+          <Footer />
+        </ModalProvider>
       </main>
     </>
   );
