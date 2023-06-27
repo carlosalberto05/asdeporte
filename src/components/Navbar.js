@@ -36,12 +36,24 @@ const Navbar = () => {
 
       <div className={styles.icons}>
         <img src="/assets/navbar/Search.svg" alt="Search" />
-        <img
+        {/* <img
           src="/assets/navbar/Cart-add.svg"
           alt="Cart"
           className={styles.cart}
-        />
-        <img src="/assets/navbar/Bell.svg" alt="Bell" />
+        /> */}
+        <div className={styles.cartContainer}>
+          <img
+            src="/assets/navbar/Cart-add.svg"
+            alt="Cart"
+            className={styles.cart}
+          />
+          <span className={styles.notification}>2</span>
+        </div>
+        <div className={styles.bellContainer}>
+          <img src="/assets/navbar/Bell.svg" alt="Bell" />
+          <span className={styles.bellNotification}>6</span>
+        </div>
+        {/* <img src="/assets/navbar/Bell.svg" alt="Bell" /> */}
         <img src="/assets/navbar/hamburg.svg" className={styles.burger} />
       </div>
       <div className={styles.containerAvatar}>
