@@ -6,7 +6,8 @@ export const SectionOne = () => {
   const { isModalActive } = useContext(ModalContext);
   const opacityClass = isModalActive ? styles.modalActive : "";
   return (
-    <div className={`${styles.sectionOne} ${opacityClass}`}>
+    <div className={`${styles.sectionOne}`}>
+      {isModalActive && <div className={styles.overlay} />}{" "}
       <p className={styles.space}>
         <span>L ´Etape México</span> te lleva a vivir la mejor experiencia del
         Tour de France con el serial de eventos de ciclismo amateur más

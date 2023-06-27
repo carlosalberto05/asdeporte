@@ -5,9 +5,10 @@ import { ModalContext } from "@/components/ModalContext";
 
 const FloatMenu = () => {
   const { isModalActive } = useContext(ModalContext);
-  const opacityClass = isModalActive ? styles.modalActive : "";
+  // const opacityClass = isModalActive ? styles.modalActive : "";
   return (
-    <div className={`${styles.containerFloatMenu} ${opacityClass}`}>
+    <div className={`${styles.containerFloatMenu}`}>
+      {isModalActive && <div className={styles.overlay} />}{" "}
       <ul>
         <li>
           <Link href="/proximos-eventos"> Próximos eventos</Link>

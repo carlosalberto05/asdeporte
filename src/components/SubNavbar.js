@@ -6,7 +6,7 @@ import { images } from "@/utils/imgSubnav";
 
 const SubNavbar = () => {
   const { isModalActive, setIsModalActive } = useContext(ModalContext);
-  const opacityClass = isModalActive ? styles.modalActive : "";
+  // const opacityClass = isModalActive ? styles.modalActive : "";
 
   const handleModal = () => {
     setIsModalActive(true);
@@ -15,7 +15,9 @@ const SubNavbar = () => {
   return (
     <>
       {isModalActive && <Modal />}
-      <div className={`${styles.subnavbar} ${opacityClass}`}>
+      {/* <div className={`${styles.subnavbar} ${opacityClass}`}></div> */}
+      <div className={`${styles.subnavbar}`}>
+        {isModalActive && <div className={styles.overlay} />}{" "}
         <div className={styles.sublogo}>
           <img
             src="/assets/subnavbar/sublogo.svg"

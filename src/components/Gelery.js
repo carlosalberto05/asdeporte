@@ -5,11 +5,12 @@ import { information } from "@/utils/imgGalery";
 
 const Gelery = () => {
   const { isModalActive } = useContext(ModalContext);
-  const opacityClass = isModalActive ? styles.modalActive : "";
+  // const opacityClass = isModalActive ? styles.modalActive : "";
 
   return (
     <>
-      <div className={`${styles.containerGalery} ${opacityClass}`}>
+      <div className={`${styles.containerGalery}`}>
+        {isModalActive && <div className={styles.overlay} />}{" "}
         <div className={styles.subContainer}>
           <img src="/assets/galery/im1.svg" alt="Imagen 1" />
           <img src="/assets/galery/im2.svg" alt="Imagen 2" />
@@ -22,7 +23,8 @@ const Gelery = () => {
         </div>
       </div>
 
-      <div className={`${styles.containerGaleryResponsive} ${opacityClass}`}>
+      <div className={`${styles.containerGaleryResponsive}`}>
+        {isModalActive && <div className={styles.overlay} />}{" "}
         {information.map((info) => (
           <div className={styles.containerCard} key={info.id}>
             <img src={info.image} />
